@@ -15,6 +15,8 @@
 		438C8A0D1E7631FC00ED6D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 438C8A0B1E7631FC00ED6D56 /* LaunchScreen.storyboard */; };
 		438C8A181E7631FD00ED6D56 /* vsonCareDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C8A171E7631FD00ED6D56 /* vsonCareDemoTests.m */; };
 		438C8A231E7631FD00ED6D56 /* vsonCareDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C8A221E7631FD00ED6D56 /* vsonCareDemoUITests.m */; };
+		438C8A361E7642DF00ED6D56 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 438C8A351E7642DF00ED6D56 /* DataViewController.m */; };
+		43DFDEC31E88A9CD00CEAF03 /* libvsonCare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DFDEC21E88A9CD00CEAF03 /* libvsonCare.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		438C8A1E1E7631FD00ED6D56 /* vsonCareDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = vsonCareDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		438C8A221E7631FD00ED6D56 /* vsonCareDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = vsonCareDemoUITests.m; sourceTree = "<group>"; };
 		438C8A241E7631FD00ED6D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		438C8A341E7642DF00ED6D56 /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
+		438C8A351E7642DF00ED6D56 /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		43DFDEC01E88A9CD00CEAF03 /* Temperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temperature.h; sourceTree = "<group>"; };
+		43DFDEC11E88A9CD00CEAF03 /* vsonCare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vsonCare.h; sourceTree = "<group>"; };
+		43DFDEC21E88A9CD00CEAF03 /* libvsonCare.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvsonCare.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43DFDEC31E88A9CD00CEAF03 /* libvsonCare.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +109,13 @@
 		438C89FC1E7631FC00ED6D56 /* vsonCareDemo */ = {
 			isa = PBXGroup;
 			children = (
+				438C8A301E76325500ED6D56 /* vson_Lib */,
 				438C8A001E7631FC00ED6D56 /* AppDelegate.h */,
 				438C8A011E7631FC00ED6D56 /* AppDelegate.m */,
 				438C8A031E7631FC00ED6D56 /* ViewController.h */,
 				438C8A041E7631FC00ED6D56 /* ViewController.m */,
+				438C8A341E7642DF00ED6D56 /* DataViewController.h */,
+				438C8A351E7642DF00ED6D56 /* DataViewController.m */,
 				438C8A061E7631FC00ED6D56 /* Main.storyboard */,
 				438C8A091E7631FC00ED6D56 /* Assets.xcassets */,
 				438C8A0B1E7631FC00ED6D56 /* LaunchScreen.storyboard */,
@@ -138,6 +149,32 @@
 				438C8A241E7631FD00ED6D56 /* Info.plist */,
 			);
 			path = vsonCareDemoUITests;
+			sourceTree = "<group>";
+		};
+		438C8A301E76325500ED6D56 /* vson_Lib */ = {
+			isa = PBXGroup;
+			children = (
+				43DFDEBE1E88A9CD00CEAF03 /* include */,
+				43DFDEC21E88A9CD00CEAF03 /* libvsonCare.a */,
+			);
+			path = vson_Lib;
+			sourceTree = "<group>";
+		};
+		43DFDEBE1E88A9CD00CEAF03 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				43DFDEBF1E88A9CD00CEAF03 /* vsonCare */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		43DFDEBF1E88A9CD00CEAF03 /* vsonCare */ = {
+			isa = PBXGroup;
+			children = (
+				43DFDEC11E88A9CD00CEAF03 /* vsonCare.h */,
+				43DFDEC01E88A9CD00CEAF03 /* Temperature.h */,
+			);
+			path = vsonCare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +316,7 @@
 				438C8A051E7631FC00ED6D56 /* ViewController.m in Sources */,
 				438C8A021E7631FC00ED6D56 /* AppDelegate.m in Sources */,
 				438C89FF1E7631FC00ED6D56 /* main.m in Sources */,
+				438C8A361E7642DF00ED6D56 /* DataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,7 +465,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2UKYM42797;
 				INFOPLIST_FILE = vsonCareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vsonCareDemo/vson_Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = vson.com.cn.vsonCareDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -439,7 +482,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2UKYM42797;
 				INFOPLIST_FILE = vsonCareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/vsonCareDemo/vson_Lib",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = vson.com.cn.vsonCareDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -514,6 +562,7 @@
 				438C8A291E7631FD00ED6D56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		438C8A2A1E7631FD00ED6D56 /* Build configuration list for PBXNativeTarget "vsonCareDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +571,7 @@
 				438C8A2C1E7631FD00ED6D56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		438C8A2D1E7631FD00ED6D56 /* Build configuration list for PBXNativeTarget "vsonCareDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +580,7 @@
 				438C8A2F1E7631FD00ED6D56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
